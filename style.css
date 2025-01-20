@@ -65,8 +65,7 @@ html,body{
 #container1{
     width: 100%;
     height: calc(100% - 100px);
-    background-color: chartreuse;
-    padding-top: 5%;
+    padding-top: 6%;
 }
 #container1 h3{
     font-size: 16px;
@@ -109,24 +108,36 @@ html,body{
 #SlideContainer{
     width: 100%;
     height: 50%;
-    margin-top: 25px;
+    padding:0.1px;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
-#SlideBox1{
+#SlideBox{
     width: 100%;
     height: 100%;
-    background-color: red;
     display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    padding-top: 2.5vw;
+    animation-name: slide;
+    animation-duration: 17.5s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
 }
-#SlideBox1 img{
+#SlideBox img{
     width: 250px;
     height: 300px;
     border-radius: 25px;
+    object-fit: cover;
+    object-position: top;
+    margin-left: 6.55vw;
+}
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
 
 
